@@ -5,6 +5,7 @@
  */
 package tp11_03;
 
+import Entidad.Baraja;
 import Entidad.Carta;
 import Servicios.BarajaService;
 import java.util.ArrayList;
@@ -22,9 +23,11 @@ public class TP11_03 {
         BarajaService bs=new BarajaService();
         ArrayList <Carta> cartas=new ArrayList();
         cartas=bs.crearBaraja();
-        for (Carta carta : cartas) {
-            System.out.println(carta.toString());
-        }
+        Baraja baraja=new Baraja(cartas);
+        baraja.barajar();
+        baraja.darCartas();
+        baraja.cartasMonton();
+        baraja.mostrarBaraja();
     }
     
 }

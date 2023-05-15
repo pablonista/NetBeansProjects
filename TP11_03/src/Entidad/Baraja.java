@@ -48,7 +48,7 @@ public class Baraja {
         cartas.removeAll(cartas);
         i=0;
         while (i<juegoCartas.length) {
-            int aux=(int)(Math.random()*40+1);
+            int aux=(int)(Math.random()*40);
             if (juegoCartas[aux]!=null) {
                 cartas.add(juegoCartas[aux]);
                 juegoCartas[aux]=null;
@@ -56,9 +56,9 @@ public class Baraja {
             }
         }
     }
-    public void siguienteCarta(int idx){
+    public void siguienteCarta(int idx, Carta carta ){
         if (idx>0) {
-            System.out.println(cartas.get(idx).toString());
+            System.out.println(carta.toString());
         }else {
             System.out.println("No hay más cartas para mostrar!!!");
         }
@@ -68,40 +68,64 @@ public class Baraja {
     }
     public void darCartas(){
         Scanner sc=new Scanner (System.in).useDelimiter("\n");
-        System.out.print("cuantas cartas pide?");
-        int cant =sc.nextInt();
-        Iterator <Carta> it = cartas.iterator();
-        int i=1;
-        if(cant>cantidadDisponibles){
-            System.out.println("Quedan disponibles "+cantidadDisponibles+" cartas.");
-        }
-        while (it.hasNext()) {
-            Carta next = it.next();
-            if (next.isSacada()!=true && i<=cant) {
-                System.out.println("La carta sacada es: "+next.toString());
-                next.setSacada(true);
-                i++;
+        String salir="N";
+        do {
+            System.out.print("cuantas cartas pide? ");
+            int cant =sc.nextInt();
+            Iterator <Carta> it = cartas.iterator();
+            int i=1;
+            if(cant>cantidadDisponibles){
+                System.out.println("Quedan disponibles "+cantidadDisponibles+" cartas.");
             }
-        }
+            while (it.hasNext()) {
+                Carta next = it.next();
+                if (!next.isSacada() && i<=cant) {
+                    //System.out.println("La carta sacada es: "+next.toString());
+                    siguienteCarta(cantidadDisponibles,next);
+                    next.setSacada(true);
+                    i++;
+                    cantidadDisponibles--;
+                }
+            }
+            System.out.print("Desea seguir sacando cartas (S/N):");
+            salir=String.valueOf(sc.next().charAt(0));
+            salir=validarOpcion(salir);
+        } while (salir.equalsIgnoreCase("S"));
+ 
     }
     public void cartasMonton(){
         Iterator <Carta> it = cartas.iterator();
+        System.out.println("\nCartas ya mostradas en la mesa: \n");
         while (it.hasNext()) {
             Carta next = it.next();
             if (next.isSacada()==true) {
-                System.out.println("Cartas ya mostradas en la mesa: ");
                 System.out.println(next.toString());
             }
         }
     }
     public void mostrarBaraja(){
         Iterator <Carta> it = cartas.iterator();
+        System.out.println("\nCartas no mostradas en la mesa: \n");
         while (it.hasNext()) {
             Carta next = it.next();
-            if (next.isSacada()==false) {
-                System.out.println("Cartas no mostradas en la mesa: ");
+            if (!next.isSacada()) {
                 System.out.println(next.toString());
             }
         }
+    }
+    private static String validarOpcion(String opc){
+        String retorno = "";
+        Scanner sc=new Scanner (System.in);
+        do {            
+            if ((opc.equalsIgnoreCase("S"))||(opc.equalsIgnoreCase("N"))) {
+                retorno=opc;
+            } else {
+                    System.out.println("Ingreso una opción invalidad.");
+                    System.out.print("Desea continuar sacando cartas (S/N): ");
+                    opc=String.valueOf(sc.next().charAt(0));
+                    retorno="";
+            }
+        } while (retorno.equalsIgnoreCase(""));
+        return retorno;
     }
 }

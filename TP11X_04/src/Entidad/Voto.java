@@ -9,39 +9,42 @@ import java.util.List;
 
 /**
  *
- * @author HP
+ * @author Pablo A. Nista Casanova <pablonista@gmail.com>
  */
 public class Voto {
-    private Alumno alumno;
-    private List<Alumno> alumnos;
+    private Alumno alumnoVotante;
+    private List<Alumno> alumnosVotantes;
 
     public Voto() {
+        
     }
 
-    public Voto(Alumno alumno, List<Alumno> alumnos) {
-        this.alumno = alumno;
-        this.alumnos = alumnos;
+    public Voto(Alumno alumnoVotante, List<Alumno> alumnosVotantes) {
+        this.alumnoVotante = alumnoVotante;
+        this.alumnosVotantes = alumnosVotantes;
     }
 
-    public Alumno getAlumno() {
-        return alumno;
+    public Alumno getAlumnoVotante() {
+        return alumnoVotante;
     }
 
-    public void setAlumno(Alumno alumno) {
-        this.alumno = alumno;
+    public void setAlumnoVotante(Alumno alumnoVotante) {
+        this.alumnoVotante = alumnoVotante;
     }
 
-    public List<Alumno> getAlumnos() {
-        return alumnos;
+    public List<Alumno> getAlumnosVotantes() {
+        return alumnosVotantes;
     }
 
-    public void setAlumnos(List<Alumno> alumnos) {
-        this.alumnos = alumnos;
+    public void setAlumnosVotantes(List<Alumno> alumnosVotantes) {
+        this.alumnosVotantes = alumnosVotantes;
     }
 
     @Override
     public String toString() {
-        return "Voto{" + "alumno=" + alumno + ", alumnos=" + alumnos + '}';
+        return "Voto{" + "alumnoVotante=" + alumnoVotante + ", alumnosVotantes=" + alumnosVotantes + '}';
     }
     
 }
+
+    

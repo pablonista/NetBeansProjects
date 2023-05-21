@@ -13,15 +13,15 @@ import java.util.List;
  */
 public class Voto {
     private Alumno alumnoVotante;
-    private List<Alumno> alumnosVotantes;
+    private List<Alumno> alumnosVotados;
 
     public Voto() {
         
     }
 
-    public Voto(Alumno alumnoVotante, List<Alumno> alumnosVotantes) {
+    public Voto(Alumno alumnoVotante, List<Alumno> alumnosVotados) {
         this.alumnoVotante = alumnoVotante;
-        this.alumnosVotantes = alumnosVotantes;
+        this.alumnosVotados = alumnosVotados;
     }
 
     public Alumno getAlumnoVotante() {
@@ -32,19 +32,18 @@ public class Voto {
         this.alumnoVotante = alumnoVotante;
     }
 
-    public List<Alumno> getAlumnosVotantes() {
-        return alumnosVotantes;
+    public List<Alumno> getAlumnosVotados() {
+        return alumnosVotados;
     }
 
-    public void setAlumnosVotantes(List<Alumno> alumnosVotantes) {
-        this.alumnosVotantes = alumnosVotantes;
+    public void setAlumnosVotados(List<Alumno> alumnosVotados) {
+        this.alumnosVotados = alumnosVotados;
     }
 
     @Override
     public String toString() {
-        return "Voto{" + "alumnoVotante=" + alumnoVotante + ", alumnosVotantes=" + alumnosVotantes + '}';
+        return "Voto{" + "alumnoVotante=" + alumnoVotante + ", alumnosVotados=" + alumnosVotados + '}';
     }
-    
 }
 
     

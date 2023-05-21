@@ -6,7 +6,7 @@ package Entidad;
 
 /**
  *
- * @author HP
+ * @author Pablo A. Nista Casanova <pablonista@gmail.com>
  */
 public class Alumno {
    private String nombre;
@@ -39,16 +39,12 @@ public class Alumno {
         return cantVotos;
     }
 
-    public void setCantVotos(int cantVotos) {
-        this.cantVotos = cantVotos;
+    public void incrementarVotos() {
+        this.cantVotos++;
     }
 
     @Override
     public String toString() {
         return "Alumno{" + "nombre=" + nombre + ", dni=" + dni + ", cantVotos=" + cantVotos + '}';
     }
-
-    
-    
-   
 }

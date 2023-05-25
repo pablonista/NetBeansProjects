@@ -78,11 +78,11 @@ public class Simulador {
         for (Alumno alumno : alumnos) {
             Set<Integer> votados = new HashSet<>();
             Set<Integer> votosRealizados = new HashSet<>();
-            for (int i = 0; i < 3; i++) {
+            while (votados.size() < 3) {
                 int indiceVoto = new Random().nextInt(alumnos.size());
                 Alumno alumnoVotado = alumnos.get(indiceVoto);
 
-                if (!alumno.equals(alumnoVotado) && !votados.contains(indiceVoto) && !votosRealizados.contains(indiceVoto)) {
+                if (alumno != alumnoVotado && !votados.contains(indiceVoto) && !votosRealizados.contains(indiceVoto)) {
                     alumnoVotado.incrementarVotos();
                     votados.add(indiceVoto);
                     votosRealizados.add(indiceVoto);

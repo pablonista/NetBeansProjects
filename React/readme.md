@@ -1,0 +1,6 @@
+# NetBeansProjects
+
+run:
+```
+npx NetBeansProjects
+```

@@ -1,20 +1,19 @@
 import React, { useCallback } from 'react'
 import { useState } from 'react'
 import './../../App.css';
-
 const Footer = () => {
   const [clicks, setclicks] = useState (0);
   const year = new Date().getFullYear();
   const companyname ="NST Software";
-  
+    
   const handleClick = () => {
-    console.log("Hola");
+    setclicks(clicks + 1);
   }
 
   return (
     <div className="container">
         <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p className="col-md-4 mb-0 text-muted">&copy; {year} {companyname}</p>
+        <p className="col-md-4 mb-0 text-muted">&copy; {year} {companyname} clicks={clicks}</p>
         <span
           className= "col-md-4 mb-0 text-muted align-items-center justify-content-center mb3 mb-md-0 me-md-auto link-dark"
           onClick={handleClick}

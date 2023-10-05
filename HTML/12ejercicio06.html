@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registración de Usuario</title>
+</head>
+<body>
+    <h1>Registrar un usuario</h1>
+    <label>Nombre del Usuario</label><br>
+    <input type="text" name="nombreUsuario"><br>
+    <label>Contraseña del Usuario</label><br>
+    <input type="password" name="passUsuario"><br>
+    <label>Edad del Usuario</label><br>
+    <input type="number" name="edadUsuario"><br>
+    <label>Fecha de nacimiento del Usuario</label><br>
+    <input type="date" value="date"><br>
+    <label>Sexo del Usuario</label><br>
+    <input type="radio" id="hombre" name="sexo" value="1">
+    <label for="hombre">Hombre</label><br>
+    <input type="radio" id="mujer" name="sexo" value="2">
+    <label for="mujer">Mujer</label><br>
+    <input type="radio" id="Noresponde" name="sexo" value="3">
+    <label for="Noresponde">Prefiero no decir</label><br>
+    <label>Pais nacimiento del Usuario</label><br>
+    <select name="pais"> <!--Combo box-->
+        <option selected>Argentina</option><!--Select indica que esta opcion estará seleccionada-->
+        <option>Brasil</option>
+        <option >Chile</option>
+        <option>Uruguay</option>
+    </select><br>
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar</button><br>
+</body>
+</html>

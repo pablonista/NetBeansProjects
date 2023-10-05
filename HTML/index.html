@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página de Prueba</title>
+</head>
+<body>
+    <h1> Encabezado de nivel 1 </h1>
+    <h2> Encabezado de nivel 2 </h2>
+    <h3> Encabezado de nivel 3 </h3>
+    <h4> Encabezado de nivel 4 </h4>
+    <!--Esto es un comentario en HTML-->
+    <p>Hola mundo</p> <!--p para parrafo-->
+    <a href="http://www.google.com" target="_blank">Enlace a Google</a>
+    <br> <!--Salto de linea-->
+    esto es una linea
+    <br>
+    <p>Países del mundo</p>
+    <ul> <!--(unordered list)-->
+    <li>Argentina</li> <!--I (list item)-->
+    <li>Perú</li>
+    <li>Chile</li>
+    </ul>
+    <ul type="square">
+        <li>Elemento 1 </li>
+        <li>Elemento 2 </li>
+        <li>Elemento 3 </li>
+        <li type="circle">Elemento 4 </li>
+        <li type="disc">Elemento 5</li>
+    </ul>
+    <p> Reglas de convivencia</p>
+    <ol> <!--(ordered list)-->
+        <li> Respeta a tu compañero y escucha su opinión. </li>
+        <li> Trata amablemente a tu entorno. </li>
+    </ol>
+    <p> Ordenamos por números </p>
+    <ol type="1">
+        <li> Elemento 1 </li>
+        <li> Elemento 2 </li>
+    </ol>
+    <p> Ordenamos por letras </p>
+    <ol type="a">
+        <li> Elemento a </li>
+        <li> Elemento b </li>
+    </ol>
+    <p>Ordenamos por números romanos empezando por el 10</p>
+    <ol type="i" start="10">
+        <li> Elemento x </li>
+        <li> Elemento xi </li>
+    </ol>
+    <p>Ciudades del mundo</p>
+    <ul>
+        <li>Argentina </li>
+        <ol>
+            <li>Buenos Aires </li>
+            <li>Bariloche </li>
+        </ol>
+        <li>Uruguay </li>
+        <ol>
+            <li>Montevideo </li>
+            <li>Punta del Este </li>
+        </ol>
+    </ul>
+    <a href="https://eggeducacion.com/es-AR/">Home de EggEducación</a> <!--Link de internet-->
+    <br>
+    <a href="https://eggeducacion.com/es-AR/"><img src="logo.jpg"></a>
+    <table>
+        <tr> <!--<tr> (table row: columna de tabla)-->
+            <td> Celda 1, línea 1 </td> <!--<td> (table data)-->
+            <td> Celda 2, línea 1 </td>
+        </tr>
+        <tr>
+            <td> Celda 1, línea 2 </td>
+            <td> Celda 2, línea 2 </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Titulo Celda 1</th> <!--<th> (table header) que sirve para crear una celda cuyo contenido esté
+                formateado como un título o cabecera de la tabla-->
+            <th> Titulo Celda 2</th>
+        </tr>
+        <tr>
+            <td>Celda 1, línea 1</td>
+            <td> Celda 2, línea 1</td>
+        </tr>
+        <tr>
+            <td> Celda 1, línea 2</td>
+            <td> Celda 2, línea 2</td>
+        </tr>
+    </table>
+    <form>
+        <label>Nombre del Usuario</label>
+        <input type="text"name=txtName value="Ingrese su nombre"><br>
+        <label>Ingrese la Contraseña</label>
+        <input type="password" name="txtPassword" value="HolaMundo"><br>
+        <label>Ingrese su Edad</label>
+        <input type="number" name="txtEdad" value="0"><br>
+        <label>Ingrese la Fecha</label>
+        <input type="date" name="txtFecha" value="date"><br>
+        <input type="text" name="nombre " placeholder="Nombre del usuario"><br>
+        <label>Comentarios</label><br>
+        <textarea name="comentario" rows="10" cols="40">Escriba un comentario</textarea><br>
+        <select name="estacion"> <!--Combo box-->
+            <option>Primavera</option>
+            <option>Verano</option>
+            <option selected>Otoño</option><!--Select indica que esta opcion estará seleccionada-->
+            <option>Invierno</option>
+        </select><br>
+        <select name="estacion" size="3" multiple> <!--Cambia la forma del Combo box-->
+            <option>Primavera</option>
+            <option>Verano</option>
+            <option>Otoño</option>
+            <option selected>Invierno</option>
+        </select><br>
+        <input type="radio" name="estacion" value="1">Primavera
+        <br>
+        <input type="radio" name="estacion" value="2">Verano
+        <br>
+        <input type="radio" name="estacion" value="3">Otoño
+        <br>
+        <input type="radio" name="estacion" value="4">Invierno
+        <br><br>
+        <br><br>
+        <input type="radio" id="primavera" name="estacion" value="1">
+        <label for="primavera">Primavera</label>
+        <input type="radio" id="verano" name="estacion" value="2">
+        <label for="verano">Verano</label>
+        <input type="radio" id="otonio" name="estacion" value="3">
+        <label for="otonio">Otoño</label>
+        <input type="radio" id="invierno" name="estacion" value="4">
+        <label for="invierno">Invierno</label>
+        <br><br><br>
+        <input type="checkbox" name="estacion" value="1">Primavera<br> 
+        <input type="checkbox" name="estacion" value="2">Verano <br>
+        <input type="checkbox" name="estacion" value="3">Otoño <br>
+        <input type="checkbox" name="estacion" value="4">Invierno <br>
+        <button type="submit">Enviar</button><br>
+        <button type="reset">Borrar</button><br><!--Limpia todo formulario-->
+        <button type="button">Borrar</button><br>
+        <input type="hidden" name="instituto" value="Egg Educación"><br>
+    </form>
+    <p align="left">Texto alineado a la izquierda</p> <!--justificacion izquierda-->
+    <p align="center">Texto alineado al centro</p> <!--justificacion centro-->
+    <p align="right">Texto alineado a la derecha</p> <!--justificacion derecha-->
+    <div align="left"> <!--De esta manera evitamos definir en cada parrafo la alineacion a la izquierda-->
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+    </div>
+    <p>Yo estudio en <span style="color: yellow">Egg</span> Programación FullStack </p><!--La etiqueta span se utiliza para agrupar elementos en línea y no realiza ningún cambio visual por sí
+        misma.-->
+    <p><strong> Texto en negrita </strong> y texto normal</p> <!--Formato de texto-->
+    <p><i> Texto en itálica </i> y texto normal</p>
+    <p><u> Texto subrayado</u> y texto normal</p>
+</body>
+</html>

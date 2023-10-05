@@ -1,6 +1,0 @@
-# NetBeansProjects
-
-run:
-```
-npx NetBeansProjects
-```

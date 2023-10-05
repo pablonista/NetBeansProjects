@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import Cards from './Cards';
 
+
 export default class Main extends Component {
     constructor(props){
         super(props);
-        console.log("Ingrese al constructor");
+        this.state = {  personajes : [] };
     }
 
     componentDidMount(){
-        console.log("Ingrese a componentDidMount");
+        /* RickAndMortyService.getAllCharacters()
+            .then((data) => this.setState({personajes : data.results }) )
+            .catch((error) => console.log(error));
+ */
     }
 
   render() {
